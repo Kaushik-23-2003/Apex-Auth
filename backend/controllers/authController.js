@@ -41,6 +41,21 @@ const validatePassword = (password) => {
 };
 
 // Utility to set the authentication cookie
+// const setAuthCookie = (res, tokenValue) => {
+//   if (!tokenValue) {
+//     console.error("Token value is missing!");
+//     return res.status(500).json({ message: "Failed to set authentication cookie" });
+//   }
+
+//   res.cookie("token", tokenValue, {
+//     httpOnly: true,
+//     secure: process.env.NODE_ENV === 'production', // Ensure HTTPS for production
+//     sameSite: 'Strict', // Use 'None' for cross-origin requests in local dev
+//     maxAge: 3600000, // Cookie expires in 1 hour
+//   });
+// };
+
+// Utility to set the authentication cookie
 const setAuthCookie = (res, tokenValue) => {
   if (!tokenValue) {
     console.error("Token value is missing!");
@@ -49,11 +64,14 @@ const setAuthCookie = (res, tokenValue) => {
 
   res.cookie("token", tokenValue, {
     httpOnly: true,
-    secure: process.env.NODE_ENV === 'production', // Ensure HTTPS for production
-    sameSite: 'Strict', // Use 'None' for cross-origin requests in local dev
-    maxAge: 3600000, // Cookie expires in 1 hour
+    secure: true, // Ensure cookies are sent over HTTPS
+    sameSite: 'None', // Allow cross-site cookie usage (for Render, might be needed)
+    domain: '.onrender.com', //  Explicitly set domain for Render
+    path: '/', // Make cookie available for all paths on the domain
+    maxAge: 3600000, // Cookie expires in 1 hour (adjust as needed)
   });
 };
+
 
 // Register user
 const registerUser = async (req, res) => {
