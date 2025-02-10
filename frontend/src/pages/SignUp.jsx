@@ -23,7 +23,7 @@ function SignUp() {
   const [hasStartedTypingPassword, setHasStartedTypingPassword] = useState(false);
   const [hasStartedTypingConfirmPassword, setHasStartedTypingConfirmPassword] = useState(false);
 
-  const baseUrl = "http://localhost:3000";
+  const baseUrl = "https://apex-auth.onrender.com";
 
   useEffect(() => {
     const timer = setTimeout(() => {
