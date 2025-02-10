@@ -124,7 +124,7 @@ const ProfilePage = ({ isDarkMode, currentUser, toggleDarkMode, isSidebarVisible
       };
 
       const response = await fetch(
-        `http://localhost:3000/api/user/update/${currentUser._id}`,
+        `https://apex-auth.onrender.com/api/user/update/${currentUser._id}`,
         {
           method: "PUT",
           credentials: "include",
@@ -229,7 +229,7 @@ const ProfilePage = ({ isDarkMode, currentUser, toggleDarkMode, isSidebarVisible
     if (!isConfirmed) return;
 
     try {
-      const res = await fetch(`http://localhost:3000/api/user/delete/${currentUser._id}`, {
+      const res = await fetch(`https://apex-auth.onrender.com/api/user/delete/${currentUser._id}`, {
         method: 'DELETE',
         credentials: "include",
       });
