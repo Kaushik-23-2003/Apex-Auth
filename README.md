@@ -1,7 +1,6 @@
 # 🚀 Apex Auth – Secure Authentication System
 
 [![Status](https://img.shields.io/badge/Status-Active-brightgreen.svg)](https://github.com/your-github-username/your-repo-name)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Live Demo](https://img.shields.io/badge/Demo-Live%20Website-success?logo=web)](https://apex-auth-frontend.onrender.com/)
 
 <p align="center">
@@ -16,15 +15,7 @@
 
 ## 📝 Project Description
 
-Apex Auth is a **modern authentication system** prioritizing **security, scalability, and ease of integration**. It provides robust user data protection through:
-
-*   **JWT Authentication**
-*   **Google OAuth**
-*   **HTTP-only Cookies**
-*   **bcrypt Password Hashing**
-*   **Email Notifications**
-
-Built with a **decoupled React frontend** and a **Node.js & Express backend**, Apex Auth offers a secure RESTful API and a maintainable codebase. Ideal for SaaS platforms, e-commerce, and applications requiring reliable user authentication.
+Apex Auth:  Secure, Scalable, Authentication.  Built for modern web applications, this system provides a complete and robust authentication solution, encompassing JWT, Google OAuth, HTTP-only cookies, bcrypt, and email notifications.  With a decoupled React frontend and Node.js backend, Apex Auth delivers a secure RESTful API, ensuring performance, maintainability, and ease of integration so you can focus on building your application's core features.
 
 ---
 
@@ -37,10 +28,10 @@ Built with a **decoupled React frontend** and a **Node.js & Express backend**, A
 
 ## ✨ Key Features
 
-*   🔒 **Secure Authentication:** User Registration, Login, Google OAuth
+*   🔒 **Secure Authentication:** User Registration, Login, Google Authentication
 *   🔑 **Robust Password Handling:** Complexity Enforcement, bcrypt Hashing
 *   🍪 **Session Management:** HTTP-only Cookies, JWT
-*   📧 **User Engagement:** Welcome Emails, Account Update Notifications (Optional), Toast Notifications
+*   📧 **User Engagement:** Welcome Emails, Account Update Notifications, Toast Notifications
 *   🛡️ **Security Best Practices:** CSRF & XSS Protection, Secure Cookies, CORS Handling
 *   👤 **Profile Management:** View, Update, and Delete User Profiles
 *   🚀 **Modern Architecture:** Decoupled Frontend & Backend, RESTful API, Scalable Codebase
@@ -62,8 +53,6 @@ Built with a **decoupled React frontend** and a **Node.js & Express backend**, A
 | **Profile View**      |  *(Insert Screenshot Path Here)*          |
 | **Edit Profile**      |  *(Insert Screenshot Path Here)*          |
 | **Account Deletion**  |  *(Insert Screenshot Path Here)*          |
-
-> **Tip:** Replace `*(Insert Screenshot Path Here)*` with the actual paths to your screenshot images in the `Screenshots/` directory.
 
 ---
 
@@ -105,8 +94,8 @@ ApexAuth/
 **Clone the Repository:**
 
 ```bash
-git clone https://github.com/your-github-username/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/Kaushik-23-2003/Apex-Auth.git
+cd Apex-Auth
 ```
 
 **Frontend (React):** http://localhost:5173
@@ -164,19 +153,6 @@ SENDER_EMAIL_PASSWORD=YOUR_EMAIL_PASSWORD
 3.  Commit changes: `git commit -m "Add: New feature"`
 4.  Push branch: `git push origin feature/new-feature`
 5.  Open a **Pull Request**.
-
-### 🎨 Code Style
-
-*   Modular Architecture
-*   Descriptive Commits
-*   Consistent Formatting
-*   Comments for Clarity
-
----
-
-## 📜 License
-
-MIT License - see [LICENSE](LICENSE) file.
 
 ---
 
