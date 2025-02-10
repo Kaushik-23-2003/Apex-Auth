@@ -24,7 +24,7 @@ export default function OAuth() {
       const { displayName, email, photoURL } = result.user;
 
       // Send user data to backend
-      const res = await fetch("http://localhost:3000/api/auth/gmail", {
+      const res = await fetch("https://apex-auth.onrender.com/api/auth/gmail", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name: displayName, email, photo: photoURL }),
