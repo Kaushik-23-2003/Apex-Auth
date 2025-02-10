@@ -48,11 +48,11 @@ Apex Auth:  Secure, Scalable, Authentication.  Built for modern web applications
 
 | Feature             | Screenshot                                  |
 | ------------------- | ------------------------------------------- |
-| **Registration Form** |  *(Insert Screenshot Path Here)*          |
-| **Google OAuth Login**|  *(Insert Screenshot Path Here)*          |
-| **Profile View**      |  *(Insert Screenshot Path Here)*          |
-| **Edit Profile**      |  *(Insert Screenshot Path Here)*          |
-| **Account Deletion**  |  *(Insert Screenshot Path Here)*          |
+| **Login/SignIn**    |     <img src="Screenshots/Login.png" alt="Login Page" width="400">       |
+| **Register/SignUp** |  <img src="Screenshots/Registration.png" alt="Registration Page" width="400">           |
+| **Profile View**      |   <img src="Screenshots/Profile-View.png" alt="Profile View Page" width="400">          |
+| **Edit Profile**      |   <img src="Screenshots/Profile-Edit.png" alt="Edit Profile Page" width="400"> <br> <img src="Screenshots/Profile-Edit-Email.png" alt="Edit Profile Email Page" width="400">           |
+| **Account Deletion**  |  <img src="Screenshots/Profile-delete-Email.png" alt="Account Deletion Email Page" width="400">         |
 
 ---
 
