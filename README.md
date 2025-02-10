@@ -1,7 +1,6 @@
 # 🌟 Apex Auth: Secure Authentication Website - Your Foundation for Modern Web Security
 
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen.svg)
-![License](https://img.shields.io/badge/License-MIT-blue.svg)
 [![Live Demo](https://img.shields.io/badge/Demo-Live%20Website-success?logo=web)](https://apex-auth-frontend.onrender.com/)
 
 <p align="center">
@@ -21,6 +20,7 @@ Apex Auth is a modern authentication system designed for security, scalability, 
 Built with a decoupled architecture, it features a React frontend for an intuitive UI and a Node.js & Express backend with a secure RESTful API. Designed for customization and extensibility, it suits SaaS platforms, e-commerce sites, and applications requiring reliable user authentication.
 
 With best-in-class security practices, Apex Auth enables developers to focus on building great applications without compromising authentication security. 🚀
+
 ---
 
 ## 🛠️ Tech Stack
@@ -29,25 +29,24 @@ Apex Auth is built with a carefully chosen tech stack to ensure performance, sec
 
 ### **Frontend - Crafting a Seamless User Experience**
 
-⚛️ React – Component-based UI for a dynamic and responsive user experience.
-🎨 CSS Modules – Scoped styling for modular and maintainable CSS.
-🚦 Redux / Context API – Centralized state management for efficient session handling.
-📡 Fetch API / Axios – Asynchronous HTTP requests for seamless frontend-backend communication.
-🎴 Font Awesome – Scalable icons for an enhanced UI.
-💬 Toast Notifications – User-friendly feedback for actions and errors.
+-⚛️ **React** – Component-based UI for a dynamic and responsive user experience.
+-🎨 **CSS Modules** – Scoped styling for modular and maintainable CSS.
+-🚦 **Redux** – Centralized state management for efficient session handling.
+-📡 **Fetch API** – Asynchronous HTTP requests for seamless frontend-backend communication.
+-💬 **Toast Notifications** – User-friendly feedback for actions and errors.
 
 ### **Backend - The Secure and Scalable Engine**
 
-🚀 Node.js + Express.js – Fast, scalable REST API with an efficient event-driven architecture.
-💾 MongoDB + Mongoose – NoSQL database with flexible schema management.
-🔒 JWT + Cookie-based Auth – Secure authentication with stateless tokens and HTTP-only cookies.
-🔑 bcryptjs – Secure password hashing for data protection.
-📧 Nodemailer – Automated email notifications for user actions.
-🌐 CORS – Secure cross-origin request handling.
-⚙️ dotenv – Environment variable management for secure configurations.
+-🚀 **Node.js + Express.js** – Fast, scalable REST API with an efficient event-driven architecture.
+-💾 **MongoDB + Mongoose** – NoSQL database with flexible schema management.
+-🔒 **JWT + Cookie-based Auth** – Secure authentication with stateless tokens and HTTP-only cookies.
+-🔑 **bcryptjs** – Secure password hashing for data protection.
+-📧 **Nodemailer** – Automated email notifications for user actions.
+-🌐 **CORS** – Secure cross-origin request handling.
+-⚙️ **dotenv** – Environment variable management for secure configurations.
 ---
 
-## ✨ Features - Unpacking the Power of Apex Auth
+## ✨ Key Features 
 
 Apex Auth provides a secure, user-friendly, and developer-centric authentication experience with the following key features:
 
@@ -131,15 +130,14 @@ Apex Auth provides a secure, user-friendly, and developer-centric authentication
 ## 👤 Profile Management  
 
 ### 📄 View & Update Profile  
-- **View Profile:** Displays user details such as name, email, and profile picture.  
+- **View Profile:** Displays user details, including name, email, date of birth, gender, and address.  
   ![Profile View](Screenshots/view-profile-page.png)  
 - **Edit Profile:** Enables users to update personal information.  
   ![Edit Profile](Screenshots/edit-profile-page.png)  
 
 ### 🗑️ Account Deletion  
-- **User-Controlled Deletion:** Allows permanent account removal.  
+- **User-Controlled Deletion:** Notifies and allows permanent account removal.  
   ![Delete Account](Screenshots/delete-account-confirmation.png)  
-- **Confirmation Email (Optional):** Notifies users upon successful deletion.  
 
 ---
 
@@ -148,8 +146,6 @@ Apex Auth provides a secure, user-friendly, and developer-centric authentication
 ### 🔗 Frontend & Backend Separation  
 - **Scalable:** Allows independent scaling and updates.  
 - **Maintainable:** Modular structure improves code organization.  
-- **Technology Flexibility:** Enables framework migrations with minimal impact.  
-  ![Architecture Diagram](Screenshots/frontend-backend-architecture-diagram.png)  
 
 ### 📡 RESTful API Communication  
 - **Standardized HTTP Methods:** Uses GET, POST, PUT, DELETE for structured interactions.  
@@ -263,19 +259,6 @@ Join us in making Apex Auth even better!
     ```
 
 5.  **Create a Pull Request** on GitHub – we'll review it promptly!
-
-### 🎨 Code Style & Best Practices
-
--   **Modular and Scalable Architecture:**  Design with maintainability in mind.
--   **Descriptive Commit Messages:**  Clearly articulate your changes.
--   **Consistent Formatting:**  Utilize Prettier and ESLint for code consistency (recommended).
--   **Comments Where Necessary:**  Enhance code clarity with comments.
-
----
-
-## 📜 License
-
-Apex Auth is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
 
 ---
 
