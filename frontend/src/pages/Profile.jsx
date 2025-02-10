@@ -26,7 +26,7 @@ const Profile = () => {
   useEffect(() => {
     const fetchUserDetails = async () => {
       try {
-        const response = await fetch(`http://localhost:3000/api/user/update/${currentUser.user._id}`, {
+        const response = await fetch(`https://apex-auth.onrender.com/api/user/update/${currentUser.user._id}`, {
           method: 'GET',
           credentials: 'include',
           headers: { 'Content-Type': 'application/json' },
