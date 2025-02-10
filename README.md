@@ -48,11 +48,13 @@ Apex Auth:  Secure, Scalable, Authentication.  Built for modern web applications
 
 | Feature             | Screenshot                                  |
 | ------------------- | ------------------------------------------- |
-| **Login/SignIn**    |     <img src="Screenshots/Login.png" alt="Login Page" width="400">       |
-| **Register/SignUp** |  <img src="Screenshots/Registration.png" alt="Registration Page" width="400">           |
-| **Profile View**      |   <img src="Screenshots/Profile-View.png" alt="Profile View Page" width="400">          |
-| **Edit Profile**      |   <img src="Screenshots/Profile-Edit.png" alt="Edit Profile Page" width="400"> <br> <img src="Screenshots/Profile-Edit-Email.png" alt="Edit Profile Email Page" width="400">           |
-| **Account Deletion**  |  <img src="Screenshots/Profile-delete-Email.png" alt="Account Deletion Email Page" width="400">         |
+| **Login/SignIn**    |     <img src="Screenshots/Login.png" alt="Login Page">       |
+| **Register/SignUp** |  <img src="Screenshots/Registration.png" alt="Registration Page">           |
+| **Profile View**      |   <img src="Screenshots/Profile-View.png" alt="Profile View Page">          |
+| **Edit Profile**      |   <img src="Screenshots/Profile-Edit.png" alt="Edit Profile Page"> <br> <img src="Screenshots/Profile-Edit-Email.png" alt="Edit Profile Email Page">           |
+| **Account Deletion**  |  <img src="Screenshots/Profile-delete-Email.png" alt="Account Deletion Email Page">         |
+
+> 💡**Tip:** All images are available in the Screenshots folder for reference.
 
 ---
 
