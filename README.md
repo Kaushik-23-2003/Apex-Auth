@@ -28,13 +28,58 @@ Apex Auth:  Secure, Scalable, Authentication.  Built for modern web applications
 
 ## ✨ Key Features
 
-*   🔒 **Secure Authentication:** User Registration, Login, Google Authentication
-*   🔑 **Robust Password Handling:** Complexity Enforcement, bcrypt Hashing
-*   🍪 **Session Management:** HTTP-only Cookies, JWT
-*   📧 **User Engagement:** Welcome Emails, Account Update Notifications, Toast Notifications
-*   🛡️ **Security Best Practices:** CSRF & XSS Protection, Secure Cookies, CORS Handling
-*   👤 **Profile Management:** View, Update, and Delete User Profiles
-*   🚀 **Modern Architecture:** Decoupled Frontend & Backend, RESTful API, Scalable Codebase
+### 🔒 Secure Authentication  
+Apex Auth provides a secure and seamless authentication experience:  
+- **User Registration & Login** – Secure account creation and authentication.  
+- **Google OAuth Authentication** – One-click sign-in via Google for convenience.  
+- **JWT-Based Authentication** – Ensures stateless authentication with JSON Web Tokens.  
+
+---
+
+### 🔑 Robust Password Handling  
+Apex Auth enforces strong password security with the following criteria:  
+✔️ Minimum **8 characters**.  
+✔️ At least **one uppercase letter (A-Z)**.  
+✔️ At least **one lowercase letter (a-z)**.  
+✔️ At least **one number (0-9)**.  
+✔️ At least **one special character** (`!@#$%^&*`).  
+
+#### 🔐 bcrypt Hashing  
+- All passwords are **hashed** before storage using **bcrypt**.  
+- Hashed passwords are **irreversible**, protecting against data breaches.  
+- Prevents brute-force and dictionary attacks.  
+
+---
+
+### 🍪 Session Management  
+Apex Auth secures session handling using:  
+- **HTTP-only Cookies** – Prevents access to authentication tokens via JavaScript.  
+- **JWT Authentication** – Provides a secure, stateless authentication mechanism.  
+- **Token Security** – Ensures tokens are safely stored in cookies to prevent unauthorized access.  
+
+---
+
+### 📧 User Engagement  
+Apex Auth enhances user interaction with real-time notifications and emails:  
+- **📩 Welcome Emails** – Users receive a confirmation email upon registration.  
+- **🔄 Account Update Notifications** – Email alerts for profile modifications.  
+- **🔔 Toast Notifications** – Real-time feedback for login, errors, and profile updates.  
+
+---
+
+### 🛡️ Security Best Practices  
+Apex Auth is built with industry-leading security implementations:  
+- **CSRF & XSS Protection** – Safeguards against malicious web attacks.  
+- **Secure Cookies (`HttpOnly`, `Secure`, `SameSite`)** – Ensures authentication tokens remain protected.  
+- **CORS Handling** – Restricts API access to prevent unauthorized requests.  
+
+---
+
+### 👤 Profile Management  
+Users have complete control over their accounts:  
+- **📄 View Profile** – Access and review personal details.  
+- **✏️ Update Profile** – Modify and update user information securely.  
+- **🗑️ Delete Account** – Permanently remove an account upon request.  
 
 ---
 
