@@ -1,0 +1,267 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--dark-background);
+  color: #FFFFFF;
+  position: relative;
+  overflow: auto;
+}
+
+/* Gradient Background Overlay */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to left, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url('bg-img-backwaters.png') no-repeat center center fixed;
+  background-size: cover;
+  z-index: -2;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--dim-overlay); /* Dim the image with opacity */
+  z-index: -1;
+}
+
+/* Container Layout */
+.container {
+  height: 70vh;
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.leftSection,
+.rightSection {
+  width: 48%;
+  box-sizing: border-box;
+}
+
+.leftSection {
+  position: relative;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.9) 50%, rgba(0, 0, 0, 0) url('bg-img-backwaters.png'));
+  color: #FFFFFF;
+}
+
+.leftSection h1,
+.leftSection h3,
+.leftSection p,
+.leftSection .buttons {
+  position: relative;
+  z-index: 3;
+}
+
+.leftSection h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: var(--font-size-h1);
+  margin-bottom: 25px;
+  line-height: 1.5;
+  font-weight: 900;
+}
+
+.leftSection h1 span {
+  color: var(--primary-color);
+}
+
+.leftSection h3 {
+  font-family: sans-serif;
+  margin-bottom: 20px;
+  font-size: var(--font-size-h3);
+  letter-spacing: 5px;
+  font-weight: 500;
+}
+
+.leftSection p {
+  font-size: var(--font-size-p);
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+  line-height: 2;
+  color: #eeeedd;
+  font-weight: 400;
+}
+
+.leftSection .buttons {
+  display: flex;
+  gap: 20px;
+  cursor: pointer;
+}
+
+.leftSection .buttons a {
+  text-decoration: none;
+  padding: 10px 20px;
+  font-weight: 500;
+  border-radius: var(--border-radius);
+  transition: all var(--transition-time) ease;
+}
+
+.leftSection .buttons .explore {
+  background-color: transparent;
+  border: 1px solid #FFFFFF;
+  color: #FFFFFF;
+}
+
+.leftSection .buttons .explore:hover {
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+.signIn {
+  background-color: var(--primary-color);
+  color: #FFFFFF;
+  border-radius: var(--button-radius);
+}
+
+.signIn:hover {
+  background-color: var(--hover-dark);
+}
+
+.leftSection .buttons .signIn:active {
+  background-color: var(--hover-dark);
+  transform: scale(var(--transform-scale));
+}
+
+.rightSection {
+  margin-left: auto;
+  background-color: transparent;
+}
+
+.rightSection h1 {
+  font-size: var(--font-size-h1);
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+  color: #444;
+  font-weight: 300;
+}
+
+.rightSection h1 span {
+  color: var(--primary-color);
+  letter-spacing: 2px;
+}
+
+.rightSection form {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+.rightSection form input {
+  padding: 8px;
+  border: 1px solid transparent;
+  background-color: var(--dark-background);
+  color: #FFFFFF;
+  width: 100%;
+  outline: none;
+  transition: border-color var(--transition-time) ease;
+}
+
+.rightSection form input::placeholder {
+  color: var(--light-gray);
+}
+
+.rightSection form .inputGroup {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  background-color: var(--dark-background);
+  border-radius: 9px;
+  padding: 10px;
+  position: relative;
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.rightSection form .submitButton {
+  background-color: var(--secondary-color);
+  color: #FFFFFF;
+  border: none;
+  padding: 10px 20px;
+  border-radius: var(--button-radius);
+  cursor: pointer;
+  font-size: var(--font-size-button);
+  width: 150px;
+  transition: all var(--transition-time) ease;
+}
+
+.submitButton:hover {
+  transform: translateY(-3px);
+}
+
+.rightSection form .submitButton:active {
+  background-color: var(--hover-dark);
+  transform: scale(var(--transform-scale));
+}
+
+.rightSection form .footer {
+  text-align: center;
+  color: var(--dark-gray);
+  margin: 25px 0px;
+}
+
+.rightSection form .footer a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  .leftSection,
+  .rightSection {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .authButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .loginLink p {
+    text-align: center;
+  }
+}
+
+/* Loading State */
+.loading {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Scale and Fade-In Animation */
+@keyframes scaleFadeIn {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.container {
+  animation: scaleFadeIn 0.6s ease-out;
+}

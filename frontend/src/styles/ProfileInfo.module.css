@@ -1,0 +1,422 @@
+.wrapper {
+  display: flex;
+  justify-content: flex-start;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  overflow: hidden;
+  margin: 0px auto;
+}
+
+.sidebarVisible .container {
+  margin-left: 250px;
+}
+
+.container {
+  width: 100%;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-left: 150px;
+}
+
+.darkContainer {
+  background-color: #333;
+}
+
+.profileContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.topControls{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 3px solid #cecece9a;
+}
+
+.darkTopControls{
+  border-bottom: 3px solid #454545;
+}
+
+.themeToggleButton, .actionButton, .deleteAccountButton{
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  height: 45px;
+}
+
+
+.themeToggleButton {
+  background-color: #007bff;
+  color: #f8f8f8;
+}
+
+.actionButton {
+  background-color: #007bff;
+  color: white;
+}
+
+.actionButton.saveButton {
+  background-color: #28a745;
+}
+
+.actionButton.cancelButton {
+  background-color: #dc3545;
+}
+
+.actionButton.editButton {
+  background-color: #ffc107;
+  color: #333;
+}
+
+.actionButton:hover {
+  opacity: 0.9;
+}
+
+.content {
+  padding: 20px;
+}
+
+.darkContent {
+  color: #f9f9f9;
+  background-color: #333;
+}
+
+.lightContent {
+  color: #333;
+}
+
+.contentHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  justify-content: center;
+}
+
+.profileImage {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 20px;
+  object-fit: cover;
+  border: 3px solid #64b5f6;
+}
+
+.darkProfileImage{
+  border: 3px solid #007bff;
+}
+
+.headerText h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.darkUserName {
+  color: #fff;
+}
+
+.lightUserName {
+  color: #222;
+}
+
+.verifiedIcon {
+  color: #28a745;
+  font-size: 1rem;
+}
+
+.headerText p {
+  margin: 5px 0 0;
+  color: #777;
+}
+
+.darkUserEmail {
+  color: #ccc;
+}
+
+.lightUserEmail {
+  color: #777;
+}
+
+.sectionsContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.topRightButtons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.deleteAccountButton {
+  background-color: #f44336;
+  color: #f9f9f9;
+}
+
+.deleteAccountButton:hover {
+  background-color: #da190b;
+}
+
+.darkDeleteAccountButton {
+  background-color: #b71c1c;
+}
+
+.darkDeleteAccountButton:hover {
+  background-color: #880e0e;
+}
+
+.actionButtons {
+  display: flex;
+  gap: 10px;
+}
+
+@media (max-width: 768px) {
+  .sectionsContainer {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.profileSection {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  padding: 15px;
+  border: 1px solid #e0e0e0;
+}
+
+.darkProfileSection {
+  background-color: #222222b4;
+  border-color: #444;
+}
+
+
+.sectionHeader {
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+}
+
+
+.sectionTitle {
+  margin: 0;
+  font-size: 1.4rem;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+}
+
+.darkSectionTitle {
+  color: #f5f5f5;
+}
+
+.sectionIcon {
+  font-size: 1.2rem;
+  color: #007bff;
+}
+
+.infoList {
+  padding: 0;
+  margin: 0;
+}
+
+.profileRow {
+  display: flex;
+  padding: 8px 0;
+  align-items: baseline; /* Align label and value */
+  gap: 15px;
+}
+
+.rowLabel {
+  font-weight: bold;
+  width: 35%;
+  text-align: right;
+  color: #555;
+  margin: 0 auto;
+  margin-bottom: 4px;
+}
+
+.darkRowLabel {
+  color: #888;
+}
+
+.rowValue {
+  flex: 1;
+  word-break: break-word;
+}
+
+
+.editableInput, .editableSelect {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #fff;
+  color: #333;
+}
+
+.darkEditableInput, .darkEditableSelect {
+  background-color: #333;
+  color: #f9f9f9;
+  border-color: #555;
+}
+
+.darkEditableInput::-webkit-calendar-picker-indicator {
+  filter: invert(1); /* Invert the calendar icon color for dark mode */
+}
+
+/* Style the date picker dropdown in dark mode (may need browser-specific prefixes) */
+.darkEditableInput::-webkit-datetime-edit-fields-wrapper,
+.darkEditableInput::-webkit-datetime-edit-text,
+.darkEditableInput::-webkit-datetime-edit-month-field,
+.darkEditableInput::-webkit-datetime-edit-day-field,
+.darkEditableInput::-webkit-datetime-edit-year-field {
+  color: #f9f9f9; /* Adjust text color in date input */
+}
+
+/* For Firefox, might need to adjust -moz-appearance: none; and style parts */
+.darkEditableInput::-moz-date-input-container {
+  color: #f9f9f9; /* Adjust text color in date input for Firefox */
+}
+
+
+.readOnlyValue {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  color: #555;
+  font-size: 1rem;
+}
+
+.darkReadOnlyValue {
+  background-color: #454545;
+  color: #ddd;
+}
+
+
+.statusBadge {
+  background-color: #e0e0e0;
+  color: #666;
+  padding: 6px 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  display: inline-block;
+}
+
+.darkStatusBadge {
+  background-color: #343434;
+  color: #ccc;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Adjust as needed */
+  font-size: 2.3rem;
+  color: #777;
+}
+
+.dark .loader {
+  color: #ccc;
+  background-color: #333;
+}
+
+.tooltip {
+  background-color: #333 ;
+  color: #fff !important;
+  border-radius: 5px !important;
+  padding: 8px 12px !important;
+  font-size: 0.9rem !important;
+}
+
+.editableGender {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.genderRadio {
+  display: none;
+}
+
+.genderLabel {
+  margin: 0 auto;
+  color: #555;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+.dark .genderLabel {
+  color: #ddd;
+}
+
+.genderIcon {
+  font-size: 2em;
+  cursor: pointer;
+  color: #898989;
+  transition: color 0.2s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+.dark .genderIcon {
+  color: #ccc;
+}
+
+.genderIconActive, .genderLabel.genderActive {
+  color: #007bff;
+  border: 2px solid #007bff;
+  background-color: rgba(0, 123, 255, 0.1);
+}
+
+.dark .genderIconActive, .dark .genderLabel.genderActive {
+  border-color: #00a2ff;
+  color: #00a2ff;
+  background-color: rgba(0, 162, 255, 0.2);
+}
+
+.editableAddress {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.addressField {
+display: flex;
+flex-direction: column;
+}
+
+.addressLabel {
+font-weight: bold;
+margin-bottom: 5px;
+color: #555;
+}
+.dark .addressLabel {
+  color: #ccc;
+}

@@ -1,0 +1,59 @@
+/* OAuth Container */
+.oauthContainer {
+  display: flex;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+/* OAuth Button Styles */
+.oauthButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 14px 18px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #db4437;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 250px;
+  
+  /* Combined transition properties for better performance */
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect */
+.oauthButton:hover {
+  background-color: #c23321; /* Darker red */
+  transform: translateY(-3px);
+}
+
+/* Active Effect */
+.oauthButton:active {
+  transform: scale(0.98);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Google Icon Styles */
+.oauthIcon {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease; /* Only transition transform */
+}
+
+/* Rotate icon on hover */
+.oauthButton:hover .oauthIcon {
+  transform: rotate(360deg);
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+  .oauthButton {
+    padding: 12px 16px;
+    font-size: 16px;
+  }
+}

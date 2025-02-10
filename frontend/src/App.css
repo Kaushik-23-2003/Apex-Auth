@@ -1,0 +1,89 @@
+:root {
+  /* Color Palette */
+  --primary-color: #4a90e2;
+  --secondary-color: #005F99;
+  --primary-blue: var(--primary-color); /* Blue for primary actions */
+  --secondary-blue: var(--secondary-color); /* Secondary blue */
+  --dark-gray: #888888;
+  --dark-background: #2E2E3A;
+  --dim-overlay: rgba(0, 0, 0, 0.6);
+  --hover-dark: #005F99;
+  --button-radius: 30px;
+  --border-radius: 20px;
+  --white-color: #ffffff;
+  --gray-color: #888888;
+  --green: #28a745;  /* Green for save button */
+  --red: #dc3545;    /* Red for cancel button */
+  --input-border-color: #ccc;
+  --input-focus-border-color: var(--active-color-light);
+  --non-editable-bg: #ddd;
+  --non-editable-dark-bg: #555;
+
+  /* Font Sizes */
+  --font-size-h1: 35px;
+  --font-size-h3: 18px;
+  --font-size-p: 15px;
+  --font-size-input: 12px;
+  --font-size-button: 18px;
+
+  /* Transition */
+  --transition-time: 0.3s;
+  --transition-speed: 0.3s;
+  --transform-scale: 0.9;
+
+  /* Global Color Variables */
+  --background-light: #f5f5f5;
+  --text-light: #333;
+  --active-color-light: #007bff;
+  --background-dark: #121212;
+  --text-dark: #fff;
+  --active-color-dark: var(--primary-color);
+
+  /* Root Variables for General Measurements */
+  --toggle-size: 20px;
+  --transition-time: 0.3s;
+  --icon-size: 20px;
+  --label-font-size: 16px;
+  --toggle-border-radius: 50%;
+  
+  /* Base Dropdown styles */
+  --font-family: 'Poppins', sans-serif;
+  --font-size-header: 16px;
+  --font-size-item: 14px;
+  --font-weight: 500;
+  --primary-color-light: var(--text-light);
+  --primary-color-dark: var(--text-dark);
+  --bg-color-light: #DCDCDC;
+  --bg-color-dark: #333;
+  --bg-color-hover-light: #DCDCDC;
+  --bg-color-hover-dark: #444;
+  --dropdown-shadow: rgba(0, 0, 0, 0.1);
+
+  /* Light & Dark Mode Variables */
+  --background-transparent: rgba(255, 255, 255, 0.7); /* Transparent background for search in transparent mode */
+  --search-bg-light: rgba(128, 128, 128, 0.158); /* Light mode search background */
+  --search-bg-dark: #444; /* Dark mode search background (darker) */
+  --hover-bg-light: #f0f0f0; /* Light mode hover effect */
+  --hover-bg-dark: #444; /* Dark mode hover effect */
+  --link-hover-bg: #00A8FF; /* Link hover underline color */
+  --icon-color-light: #f5f5f5; /* Icon color for light mode */
+  --icon-color-dark: #222; /* Icon color for dark mode */
+  --search-placeholder-light: #1d1f2a; /* Search placeholder color for light mode */
+  --search-placeholder-dark: #f9f9f9; /* Search placeholder color for dark mode */
+}
+
+/* Light Mode Theme */
+.light {
+  --background: var(--background-light);
+  --text: var(--text-light);
+  --toggle-bg-color: var(--primary-color);
+  --toggle-text-color: #fff;
+}
+
+/* Dark Mode Theme */
+.dark {
+  --background: var(--background-dark);
+  --text: var(--text-dark);
+  --toggle-bg-color: var(--primary-color);
+  --toggle-text-color: #fff;
+}

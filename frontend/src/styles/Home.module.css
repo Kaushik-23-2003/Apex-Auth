@@ -1,0 +1,197 @@
+.home {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: 'Nunito Sans', sans-serif;
+  transition: background-color 0.4s ease, color 0.4s ease;
+  position: relative; 
+}
+
+.greetingContainer {
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 1s forwards ease-out 0.2s;
+}
+
+.greetingText {
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.greetingSubText {
+  font-size: 1.3rem;
+  opacity: 0.8;
+}
+
+.robotContainer {
+  margin-bottom: 15px;
+  animation: pulse 5s infinite ease-in-out, fadeIn 2s ease-out 1s forwards;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.robotImage {
+  width: 250px;
+  height: auto;
+  display: block;
+  border-radius: 20px;
+  max-width: 100%;
+  background-color: transparent; /* Ensure no background color is set */
+}
+
+.homeFooter {
+  text-align: center;
+  padding: 25px;
+  margin-top: auto;
+  font-size: 1rem;
+  opacity: 0.7;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.themeToggleContainer {
+  position: absolute;
+  top: 15px;
+  right: 30px;
+  z-index: 1;
+}
+
+.themeToggleButton {
+  border: none;
+  padding: 12px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.themeToggleButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.themeToggleButton:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03);
+  }
+}
+
+/* ---------------------------------------------------------- */
+/*                      LIGHT THEME STYLES                      */
+/*       Styles specifically for the light theme (styles.light)*/
+/* ---------------------------------------------------------- */
+.light {
+  background-color: #f9f9f9; /* Light background color */
+  color: #333; /* Dark text color */
+}
+
+.light .greetingSubText {
+  color: #333; /* Dark subtext color */
+}
+
+.light .homeFooter {
+  color: #333; /* Dark footer text color */
+}
+
+.light .themeToggleButton {
+  background-color: #ffcc66; /* Accent yellow for theme button */
+  color: #333; /* Dark text on theme button */
+}
+
+.light .themeToggleButton:hover {
+  background-color: #fac04b; /* Primary blue on hover */
+}
+
+
+/* ---------------------------------------------------------- */
+/*                      DARK THEME STYLES                       */
+/* ---------------------------------------------------------- */
+.dark {
+  background-color: #121212; /* Dark background color */
+  color: #e0e0e0; /* Light text color */
+}
+
+.dark .greetingSubText {
+  color: #e0e0e0; /* Light subtext color */
+}
+
+.dark .homeFooter {
+  color: #e0e0e0; /* Light footer text color */
+}
+
+.dark .themeToggleButton {
+  background-color: #ffcc66; /* Accent light yellow for theme button */
+  color: #1a1a2e; /* Dark text on theme button */
+}
+
+.dark .themeToggleButton:hover {
+  background-color: #fac04b; /* Primary light blue on hover */
+  color: #1a1a2e; /* Dark text on hover */
+}
+
+
+/* ---------------------------------------------------------- */
+/*                      RESPONSIVE DESIGN                       */
+/*       Media queries for different screen sizes             */
+/* ---------------------------------------------------------- */
+@media (max-width: 768px) {
+  .home {
+    padding: 30px 15px; /* Adjusted padding for smaller screens */
+  }
+
+  .greetingText {
+    font-size: 2.8rem; /* Adjusted greeting text size for mobile */
+  }
+
+  .greetingSubText {
+    font-size: 1.2rem; /* Adjusted greeting subtext size for mobile */
+  }
+
+  .robotImage {
+    max-width: 200px; /* Adjusted robot image size for mobile */
+  }
+
+  .homeFooter {
+    padding: 20px; /* Adjusted footer padding for mobile */
+    font-size: 0.9rem; /* Adjusted footer font size for mobile */
+  }
+
+  .themeToggleContainer {
+    top: 20px; /* Adjusted theme toggle position for mobile */
+    right: 15px;
+  }
+
+  .themeToggleButton {
+    padding: 10px 15px; /* Adjusted theme button padding for mobile */
+    font-size: 0.9rem; /* Adjusted theme button font size for mobile */
+    gap: 6px; /* Adjusted gap in theme button for mobile */
+  }
+}

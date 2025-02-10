@@ -1,0 +1,178 @@
+/* Define color variables for both light and dark modes */
+:root {
+  --primary-color-light: #007bff;
+  --primary-color-dark: #4a90e2;
+
+  --background-color-light: #FFFFFF;
+  --background-color-dark: #222222;
+
+  --text-color-light: #333;
+  --text-color-dark: #ddd;
+
+  --link-color-light: #333;
+  --link-color-dark: #ccc;
+
+  --hover-background-light: #FAFAFA;
+  --hover-background-dark: #262626;
+
+  --active-background-light: #007bff;
+  --active-background-dark: #007bff;
+
+  --icon-color-light: #333;
+  --icon-color-dark: #ccc;
+
+  --icon-hover-color-light: #007bff; 
+  --icon-hover-color-dark: #5082E7;
+}
+
+/* General Sidebar Styles */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 250px; 
+  border-right: 1px solid #444;
+  box-shadow: 1px 0 5px rgba(0, 0, 0, 1);
+  padding-top: 20px;
+  transition: width 0.2s ease;
+  z-index: 100;
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+
+.sidebar.closed {
+  width: 80px; 
+}
+
+.sidebar.open {
+  width: 250px; /* Sidebar expanded width */
+}
+
+/* Toggle button styling */
+.sidebar .toggleButton {
+  position: absolute;
+  top: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color-light);
+  color: #ffffff;
+  border-radius: 50%;
+  padding: 10px;
+  transition: all 0.3s ease;
+  left: 50%;
+  transform: translateX(-70%);
+}
+
+.sidebar.open .toggleButton {
+  left: auto;
+  right: 10px;
+  transform: none;
+}
+
+/* Menu List Styles */
+.sidebar ul{
+  list-style-type: none;
+  padding: 0;
+  margin-top: 50px;
+  overflow-y: auto;
+  height: calc(100vh - 70px);
+  overflow-x: hidden;
+  
+}
+
+.sidebarItem {
+  margin: 10px 0;
+}
+
+.sidebarLink{
+  display: flex;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  align-items: center;
+  text-decoration: none;
+  color: var(--link-color-light);
+  font-size: 16px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-weight: 900;
+}
+
+/* Hover Effect */
+.sidebarLink:hover {
+  background-color: var(--hover-background-light);
+  color: var(--icon-hover-color-light);
+}
+
+/* Icon and Label Styles */
+.icon {
+  font-size: 20px;
+  margin-right: 15px;
+  transition: all 0.3s ease;
+}
+
+.label{
+  font-size: 16px;
+  font-weight: 500;
+  transition: opacity 0.3s ease;
+}
+
+.sidebar.closed .label{
+  opacity: 0;
+  width: 0;
+  height: 0;
+  padding: 0;
+  margin: 0;
+}
+/* Active item styling */
+.sidebarLink.active {
+  background-color: var(--active-background-light);
+  color: #ffffff;
+}
+
+.sidebarLink.active .icon{
+  color: #ffffff;
+}
+
+/* Light Mode Sidebar */
+.sidebar.light {
+  background-color: var(--background-color-light);
+  color: var(--text-color-light);
+}
+
+.sidebar.light .sidebarLink {
+  color: var(--link-color-light);
+}
+
+.sidebar.light .sidebarLink:hover {
+  background-color: var(--hover-background-light);
+  color: var(--icon-hover-color-light);
+}
+
+.sidebar.light .sidebarLink.active {
+  background-color: var(--active-background-light);
+  color: #ffffff;
+}
+
+/* Dark Mode Sidebar */
+.sidebar.dark {
+  background-color: var(--background-color-dark);
+  color: var(--text-color-dark);
+}
+
+.sidebar.dark .sidebarLink {
+  color: var(--link-color-dark);
+}
+
+.sidebar.dark .sidebarLink:hover {
+  background-color: var(--hover-background-dark);
+  color: var(--icon-hover-color-dark);
+}
+
+.sidebar.dark .sidebarLink.active {
+  background-color: var(--active-background-dark);
+  color: #ffffff;
+}

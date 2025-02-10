@@ -1,0 +1,272 @@
+/* General Styles */
+body {
+  max-height: 100vh;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--dark-background);
+  color: var(--white-color);
+  position: relative;
+  overflow: auto;
+}
+
+/* Gradient Background Overlay */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to left, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url('../assets/bg-img-backwaters.png') no-repeat center center fixed;
+  background-size: cover;
+  z-index: -2;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); 
+  z-index: -1;
+}
+
+/* Container Layout */
+.container {
+  height: 70vh;
+  margin-top: 4%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; 
+  max-width: 1200px; 
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.leftSection, .rightSection {
+  width: 48%;
+  box-sizing: border-box;
+}
+
+.leftSection {
+  position: relative;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.9) 50%, rgba(0, 0, 0, 0) url('bg-img-backwaters.png'));
+  color: var(--white-color);
+}
+
+.leftSection h1,
+.leftSection h3,
+.leftSection p,
+.leftSection .buttons {
+  position: relative;
+  z-index: 3;
+}
+
+.leftSection h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 35px;
+  margin-bottom: 25px;
+  line-height: 1.5;
+  font-weight: 900;
+}
+
+.leftSection h1 span {
+  color: var(--primary-blue);
+}
+
+.leftSection h3 {
+  font-family: sans-serif;
+  margin-bottom: 20px;
+  font-size: 18px;
+  letter-spacing: 5px;
+  font-weight: 500;
+}
+
+.leftSection p {
+  font-size: 15px;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+  line-height: 2;
+}
+
+.leftSection .buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.leftSection .buttons a {
+  text-decoration: none;
+  padding: 10px 20px;
+  font-weight: 500;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.leftSection .buttons .explore {
+  background-color: transparent;
+  border: 1px solid var(--white-color);
+  color: var(--white-color);
+}
+
+.leftSection .buttons .explore:hover {
+  background-color: var(--white-color);
+  color: var(--dark-background);
+}
+
+.order {
+  background-color: var(--primary-blue);
+  color: var(--white-color);
+}
+
+.order:hover {
+  background-color: var(--secondary-blue);
+} 
+
+.leftSection .buttons .order:active {
+  background-color: var(--secondary-blue);
+  transform: scale(0.9);
+}
+
+.rightSection {
+  background-color: transparent;
+}
+
+.rightSection h1 {
+  font-size: 35px;
+  margin-bottom: 15px;
+}
+
+.rightSection h1 span {
+  color: var(--primary-blue);
+}
+
+.rightSection form {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
+.rightSection form input {
+  padding: 8px;
+  border: none;
+  background-color: var(--dark-background);
+  color: var(--white-color);
+  width: 100%;
+  outline: none;
+}
+
+.rightSection form input::placeholder {
+  color: var(--gray-color);
+}
+
+.nameGroup {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.rightSection form .inputGroup {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  background-color: var(--dark-background);
+  border-radius: 9px;
+  padding: 10px;
+}
+
+.rightSection form .inputGroup i {
+  color: var(--white-color); 
+  font-size: 15px; 
+}
+
+.rightSection form .buttonGroup {
+  display: flex;
+  margin: 20px 0px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.rightSection form .createAccount {
+  background-color: var(--secondary-blue);
+  color: var(--white-color);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 18px;
+  width: 200px;
+  transition: all 0.3s ease;
+}
+
+.createAccount:hover {
+  transform: translateY(-3px);
+}
+
+.icon {
+  color: var(--white-color);
+}
+
+.rightSection form .createAccount:active {
+  background-color: var(--secondary-blue);
+  transform: scale(0.8);
+}
+
+.rightSection form .loginLink {
+  text-align: center;
+  color: var(--gray-color);
+}
+
+.rightSection form .loginLink a {
+  color: var(--primary-blue);
+  text-decoration: none;
+}
+
+/* Add animation for loading state */
+.loading {
+  opacity: 0.5; 
+  pointer-events: none; 
+}
+
+/* Scale and Fade-In Animation */
+@keyframes scaleFadeIn {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Apply the animation to the container */
+.container {
+  animation: scaleFadeIn 0.6s ease-out; 
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  .leftSection,
+  .rightSection {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .authButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .loginLink p {
+    text-align: center;
+  }
+}

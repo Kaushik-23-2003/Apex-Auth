@@ -1,0 +1,66 @@
+.notFoundContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Full viewport height */
+  background-color: #f4f7fa; /* Light background color */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px;
+  text-align: center;
+}
+
+.content {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  max-width: 600px;
+  width: 100%;
+}
+
+.errorCode {
+  font-size: 4rem;
+  color: #333; /* Dark grey for error code */
+  margin-bottom: 10px;
+}
+
+.errorMessage {
+  font-size: 2rem;
+  color: #555; /* Medium grey for error message */
+  margin-bottom: 20px;
+}
+
+.description {
+  color: #777; /* Light grey for description */
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.goHomeButton {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #007bff; /* Primary blue color */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.goHomeButton:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Responsive adjustments if needed */
+@media (max-width: 768px) {
+  .content {
+    padding: 30px;
+  }
+  .errorCode {
+    font-size: 3rem;
+  }
+  .errorMessage {
+    font-size: 1.8rem;
+  }
+}

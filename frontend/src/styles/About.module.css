@@ -1,0 +1,389 @@
+/* styles/About.module.css */
+
+/* GENERAL STYLES */
+.aboutPage {
+  font-family: 'Outfit', sans-serif;
+  padding: 40px 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: background-color 0.4s ease, color 0.4s ease;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* HEADER */
+.aboutHeader {
+  text-align: center;
+  margin-bottom: 50px;
+  opacity: 0;
+  animation: fadeIn 1s forwards ease-out;
+}
+
+.aboutTitle {
+  font-size: 3.2rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.aboutSubtitle {
+  font-size: 1.15rem;
+  opacity: 0.75;
+  line-height: 1.5;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* SPAN TEXT STYLING */
+.developerDescription span {
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: background 0.3s ease, color 0.3s ease;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+/* Light Mode Span */
+.light .developerDescription span {
+  color: #007bff;
+  background-color: rgba(0, 123, 255, 0.15);
+}
+
+/* Dark Mode Span */
+.dark .developerDescription span {
+  color: #80deea;
+  background-color: rgba(128, 222, 234, 0.15);
+}
+
+/* SECTIONS */
+.aboutContent {
+  width: 100%;
+  max-width: 950px;
+  margin-bottom: 70px;
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+  padding: 0 15px;
+}
+
+.aboutSection {
+  border-radius: 18px;
+  backdrop-filter: blur(12px);
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+.aboutSection:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* DEVELOPER INFO */
+.developerInfo {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 35px;
+  border-radius: 20px;
+}
+
+.developerAvatar {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid var(--avatar-border);
+  transition: border 0.3s ease;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* TEXT */
+.developerText {
+  flex: 1;
+  text-align: justify;
+}
+
+.developerName {
+  font-size: 2.3rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+  letter-spacing: -0.8px;
+}
+
+.developerDescription {
+  font-size: 1.08rem;
+  line-height: 1.7;
+  color: var(--text-color);
+}
+
+/* SKILLS */
+.skillsSection {
+  text-align: center;
+
+}
+
+.skillsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.skill {
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.skill:hover {
+  transform: scale(1.1);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* CONTACT SECTION */
+.contactSection {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.contactText {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  opacity: 0.85;
+  line-height: 1.6;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contactLinks {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.contactButton {
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: background 0.3s ease, transform 0.2s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  border-width: 2px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  display: flex; /* Enable flexbox for icon alignment */
+  align-items: center; /* Vertically align icon and text */
+  gap: 10px; /* Space between icon and text */
+  position: relative; /* Position context for icon animation */
+  overflow: hidden; /* Clip icon during rotation */
+}
+
+.contactButton:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+.contactIcon {
+  font-size: 1.2rem; /* Adjust icon size */
+  transition: transform 0.6s ease-in-out; /* Smooth icon transition */
+  display: block; /* Ensure icon behaves as block for animation */
+}
+
+.contactButton:hover .contactIcon {
+  transform: rotate(360deg); /* Rotate icon on hover */
+}
+
+
+/* FOOTER */
+.aboutFooter {
+  text-align: center;
+  font-size: 0.9rem;
+  opacity: 0.75;
+  color: var(--text-color);
+  border-top: 1px solid var(--text-color);
+}
+
+/* THEME TOGGLE */
+.themeToggleContainer {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  z-index: 1;
+}
+
+.themeToggleButton {
+  color: var(--text-color);
+  border: none;
+  padding: 12px 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  background-color: #007bff;
+  color: #f8f8f8;
+}
+
+.themeToggleButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.25);
+}
+
+.themeToggleButton:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+  to { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: translateY(-20px); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* ---------------------------------------------------------- */
+/*                      LIGHT THEME STYLES                      */
+/*       Styles specifically for the light theme (styles.light)*/
+/* ---------------------------------------------------------- */
+.light {
+  background: #f5f5f5;
+  color: #3a3a3a;
+  --primary-color: #007bff;
+  --avatar-border: #424242;
+}
+
+
+.light .aboutSection {
+  background-color:  #f5f5f5;
+  border: 3px solid #bfbfbf;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.05);
+}
+
+
+.light .developerName {
+  color: #2e2e2e;
+}
+
+.light .developerDescription span {
+  color: #0056b3;
+  background-color: rgba(0, 86, 179, 0.1);
+}
+
+
+.light .skill {
+  background: #007bff;
+  color: #f8f8f8;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
+}
+
+.light .skill:hover {
+  background: #0056b3;
+}
+
+
+.light .contactButton {
+  background: #007bff;
+  color: #f8f8f8;
+  border-color: #007bff;
+  box-shadow: 0 4px 9px rgba(0, 0, 0, 0.1);
+}
+
+.light .contactButton:hover {
+  background: #007bff;
+  color: #f8f8f8;
+}
+
+
+/* ---------------------------------------------------------- */
+/*                      DARK THEME STYLES                       */
+/*       Styles specifically for the dark theme (styles.dark) */
+/* ---------------------------------------------------------- */
+.dark {
+  background: #121212;
+  color: #d4d4d4;
+  --primary-color: #64b5f6;
+  --avatar-border: #424242;
+}
+
+
+.dark .aboutSection {
+  background-color: rgba(20, 20, 20, 0.8);
+  border: 1px solid rgba(80, 80, 80, 0.4);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+.dark .developerName {
+  color: #f0f0f0;
+}
+
+
+.dark .developerDescription span {
+  color: #a7ffeb;
+  background-color: rgba(167, 255, 235, 0.1);
+}
+
+
+.dark .skill {
+  background: #64b5f6;
+  color: #2a2a2a;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.dark .skill:hover {
+  background: #90caf9;
+}
+
+
+.dark .contactButton {
+  background: #64b5f6;
+  color: #2a2a2a;
+  border-color: #64b5f6;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.dark .contactButton:hover {
+  background: #5db0f4ea;
+  color: #121212;
+}
+
+
+/* ---------------------------------------------------------- */
+/*                      RESPONSIVE DESIGN                       */
+/*       Media queries for different screen sizes             */
+/* ---------------------------------------------------------- */
+@media (max-width: 768px) {
+  .aboutPage {
+    padding: 30px 15px;
+  }
+
+  .aboutTitle {
+    font-size: 2.5rem;
+  }
+
+  .developerInfo {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .themeToggleContainer {
+    right: 15px;
+  }
+}

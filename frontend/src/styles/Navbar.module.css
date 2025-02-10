@@ -1,0 +1,168 @@
+/* Default navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  width: 95vw;
+  margin: 0;
+}
+
+/* Base styles for all modes */
+.navbar .rightSection .search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 15px; 
+  border-radius: 25px; 
+  background-color: #bfbfbf27; 
+  transition: background-color 0.3s ease, color 0.3s ease;
+  outline: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+.navbar .rightSection .search input {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  width: 100%;
+  padding-left: 10px;
+  color: inherit;
+  font-size: 16px; 
+}
+
+.navbar .rightSection .search button {
+  background-color: transparent;
+  border: none;
+  color: var(--icon-color-light); 
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+/* Light mode */
+.light {
+  background-color: var(--background-light);
+  color: var(--text-color-light);
+}
+
+.light .navbar .rightSection .search {
+  background-color: #cecece; /* Light mode search background */
+}
+
+.light .navbar .rightSection .search input::placeholder {
+  color: var(--search-placeholder-light); /* Dark text in light mode */
+}
+
+.light .navbar .rightSection .search i {
+  color: var(--icon-color-light); /* Dark icon in light mode */
+}
+
+/* Dark mode */
+.dark {
+  background-color: var(--background-dark);
+  color: var(--text-color-dark);
+}
+
+.dark .navbar .rightSection .search {
+  background-color: var(--search-bg-dark); /* Dark mode search background */
+}
+
+.dark .navbar .rightSection .search input::placeholder {
+  color: var(--search-placeholder-dark); /* Light text in dark mode */
+}
+
+.dark .navbar .rightSection .search i {
+  color: var(--icon-color-dark); /* Light icon in dark mode */
+}
+
+/* Transparent mode */
+.transparent {
+  background-color: transparent;
+  color: var(--text-color-dark);
+}
+
+.transparent .navbar .rightSection .search {
+  background-color: var(--background-transparent); /* Light search background in transparent mode */
+}
+
+.transparent .navbar .rightSection .search input::placeholder {
+  color: var(--icon-color-dark); /* White text in transparent mode */
+}
+
+/* Logo and links styles */
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.rightSection .link {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  position: relative;
+  color: inherit; 
+}
+
+.rightSection .link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px;
+  margin-bottom: -10px;
+  background-color: var(--primary-color); 
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+.rightSection .link.active::after,
+.rightSection .link:hover::after {
+  width: 100%;
+}
+
+/* User section */
+.rightSection .userSection {
+  display: flex;
+  align-items: center;
+  max-height: 30px;
+}
+
+.rightSection .userImage {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.rightSection .userImage img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .rightSection {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .search {
+    width: 100%;
+  }
+}
