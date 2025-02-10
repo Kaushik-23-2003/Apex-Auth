@@ -56,6 +56,7 @@ const validatePassword = (password) => {
 // };
 
 // Utility to set the authentication cookie
+// Utility to set the authentication cookie
 const setAuthCookie = (res, tokenValue) => {
   if (!tokenValue) {
     console.error("Token value is missing!");
@@ -64,11 +65,11 @@ const setAuthCookie = (res, tokenValue) => {
 
   res.cookie("token", tokenValue, {
     httpOnly: true,
-    secure: true, // Ensure cookies are sent over HTTPS
-    sameSite: 'None', // Allow cross-site cookie usage (for Render, might be needed)
-    domain: '.onrender.com', //  Explicitly set domain for Render
-    path: '/', // Make cookie available for all paths on the domain
-    maxAge: 3600000, // Cookie expires in 1 hour (adjust as needed)
+    secure: true,
+    sameSite: 'None',
+    domain: 'apex-auth.onrender.com', 
+    path: '/',
+    maxAge: 3600000,
   });
 };
 
