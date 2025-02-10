@@ -63,14 +63,14 @@ const setAuthCookie = (res, tokenValue) => {
     return res.status(500).json({ message: "Failed to set authentication cookie" });
   }
 
-  res.cookie("token", tokenValue, {
+res.cookie("token", tokenValue, {
     httpOnly: true,
     secure: true,
-    sameSite: 'None',
-    domain: 'apex-auth.onrender.com', 
+    sameSite: 'Lax',
+    domain: 'apex-auth.onrender.com',
     path: '/',
     maxAge: 3600000,
-  });
+});
 };
 
 
