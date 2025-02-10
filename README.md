@@ -19,7 +19,7 @@ Apex Auth:  Secure, Scalable, Authentication.  Built for modern web applications
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️ Tech Stack - [MERN]
 
 *   **Frontend:** React, CSS Modules, Redux, Fetch API, Toast Notifications
 *   **Backend:** Node.js, Express.js, MongoDB, Mongoose, JWT, bcryptjs, Nodemailer, CORS, dotenv
