@@ -20,7 +20,7 @@ const SignIn = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { showToast, hideToast } = useToast();
-  const baseUrl = "http://localhost:3000";
+  const baseUrl = "https://apex-auth.onrender.com";
 
   // Simulate page load
   useEffect(() => {
