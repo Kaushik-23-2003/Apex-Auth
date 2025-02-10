@@ -50,7 +50,7 @@ const setAuthCookie = (res, tokenValue) => {
   res.cookie("token", tokenValue, {
     httpOnly: true,
     secure: true, 
-    sameSite: 'Strict', // Use 'None' for cross-origin requests in local dev
+    sameSite: 'None', // Use 'None' for cross-origin requests in local dev
     maxAge: 3600000, // Cookie expires in 1 hour
   });
 };
