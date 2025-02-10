@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { NavLink as Link } from 'react-router-dom'; 
 import { FaThumbtack, FaTimes, FaBox, FaHome, FaGift, FaMapMarkerAlt, FaCreditCard, FaSignOutAlt } from "react-icons/fa";
 import styles from "../styles/Sidebar.module.css";
-import { useSignOut } from './SignOut'; 
+import useSignOut from './SignOut'; 
 
 const Sidebar = ({ isDarkMode, toggleSidebar }) => {
   const [isOpen, setIsOpen] = useState(true);
