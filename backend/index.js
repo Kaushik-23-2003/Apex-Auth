@@ -21,11 +21,11 @@ app.use(cors({
   credentials: true, // Enable cookies with cross-origin requests
 }));
 
-// // Manually setting the Access-Control-Allow-Credentials header (to ensure it's applied)
-// app.use((req, res, next) => {
-//   res.setHeader('Access-Control-Allow-Credentials', 'true');
-//   next(); // Proceed to the next middleware or route handler
-// });
+// Manually setting the Access-Control-Allow-Credentials header (to ensure it's applied)
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Credentials', 'true');
+  next(); // Proceed to the next middleware or route handler
+});
 
 app.use(express.json());
 app.use(cookieParser());
