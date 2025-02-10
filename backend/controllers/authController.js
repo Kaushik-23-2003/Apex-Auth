@@ -109,6 +109,32 @@ const registerUser = async (req, res) => {
 };
 
 // Login user
+// const loginUser = async (req, res) => {
+//   let { email, password } = req.body;
+//   email = email.toLowerCase();
+
+//   try {
+//     const user = await User.findOne({ email });
+//     if (!user || !(await bcrypt.compare(password, user.password))) {
+//       return res.status(400).json({ message: "Invalid credentials." });
+//     }
+
+//     const token = generateToken(user);
+//     setAuthCookie(res, token);
+
+//     return res.status(200).json({
+//       user: {
+//         username: user.username,
+//         email: user.email,
+//         profilePicture: user.profilePicture,
+//         _id: user._id,
+//       },
+//     });
+//   } catch (error) {
+//     return res.status(500).json({ message: "An error occurred. Please try again later." });
+//   }
+// };
+
 const loginUser = async (req, res) => {
   let { email, password } = req.body;
   email = email.toLowerCase();
@@ -120,7 +146,10 @@ const loginUser = async (req, res) => {
     }
 
     const token = generateToken(user);
+    console.log("Generated token:", token); // **ADD THIS LINE**
+    console.log("Calling setAuthCookie..."); // **ADD THIS LINE**
     setAuthCookie(res, token);
+    console.log("setAuthCookie called successfully (hopefully)"); // **ADD THIS LINE**
 
     return res.status(200).json({
       user: {
