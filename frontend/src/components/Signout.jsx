@@ -14,7 +14,7 @@ export const useSignOut = () => {
     setIsLoggingOut(true);
 
     try {
-      const response = await fetch("http://localhost:3000/api/auth/signout", {
+      const response = await fetch("https://apex-auth.onrender.com/api/auth/signout", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
