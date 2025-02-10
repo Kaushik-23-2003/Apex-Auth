@@ -4,7 +4,7 @@
 [![Live Demo](https://img.shields.io/badge/Demo-Live%20Website-success?logo=web)](https://apex-auth-frontend.onrender.com/)
 
 <p align="center">
-  <img src="path/to/your/project-logo.png" alt="Apex Auth Logo" width="200">
+  <img src="Screenshots/key.png" alt="Apex Auth Logo" width="200">
 </p>
 
 <p align="center">
