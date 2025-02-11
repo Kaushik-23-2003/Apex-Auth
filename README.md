@@ -1,6 +1,6 @@
 # 🚀 Apex Auth – Secure Authentication System
 
-[![Status](https://img.shields.io/badge/Status-Active-brightgreen.svg)](https://github.com/your-github-username/your-repo-name)
+[![Status](https://img.shields.io/badge/Status-Active-brightgreen.svg)](https://github.com/Kaushik-23-2003/Apex-Auth)
 [![Live Demo](https://img.shields.io/badge/Demo-Live%20Website-success?logo=web)](https://apex-auth-frontend.onrender.com/)
 
 <p align="center">
