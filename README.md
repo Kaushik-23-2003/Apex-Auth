@@ -85,7 +85,9 @@ Users have complete control over their accounts:
 
 ## 🌐 Live Demo
 
-🔗 **[Try Apex Auth](https://apex-auth-frontend.onrender.com/)**
+🔗 **[Try Apex Auth](https://apex-auth-frontend.onrender.com/)**  
+📽️ **[Watch the Demo Video](https://drive.google.com/file/d/1iIN_XhINoLmgl_7xVl6faaj4rY3e2-A1/view?usp=sharing)**  
+
 
 ---
 
